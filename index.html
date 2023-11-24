@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Simple Web Page</title>
+    <title>server lol</title>
 </head>
 <body>
     <div id="help">#help</div>
     <div id="myParagraph">#myParagraph</div>
 
-    <script src="https://raw.githubusercontent.com/itsshello/curl/main/data.json"></script>
     <script>
-        // Replace placeholders with actual content from data.json
-        document.getElementById('help').innerText = data.commands.help;
-        document.getElementById('myParagraph').innerText = data.commands.wifipass_show;
+        // Fetch the JSON data from the URL
+        fetch('https://raw.githubusercontent.com/itsshello/curl/main/data.json')
+            .then(response => response.json())
+            .then(data => {
+                // Replace placeholders with actual content from data.json
+                document.getElementById('help').innerText = data.commands.help;
+                document.getElementById('myParagraph').innerText = data.commands.wifipass_show;
+            })
+            .catch(error => console.error('Error fetching data:', error));
     </script>
 </body>
 </html>
-
