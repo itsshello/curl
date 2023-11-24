@@ -5,5 +5,5 @@
     "curl -s https://itsshello.github.io/curl/# {name}"
   },
   "wifi_show": "netsh wlan show profile",
-  "wifipass_show": "netsh wlan show profile "_wifiname_" key = clear",
+  "wifipass_show": "netsh wlan show profile "\wifiname\" key = clear",
 ]
