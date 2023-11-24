@@ -1,7 +1,7 @@
 {
   "commands": {
     "help": "wifi_show = shows the wifis that ever connected wifipass_show shows password if it's stored curl -s https://itsshello.github.io/curl/#name example curl command"
-  },
-  "wifi_show": "netsh wlan show profile",
-  "wifipass_show": "netsh wlan show profile \"wifiname\" key=clear"
+    "wifi_show": "netsh wlan show profile",
+    "wifipass_show": "netsh wlan show profile \"wifiname\" key=clear"
+  }
 }
