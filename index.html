@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Simple Web Page</title>
+    <title>My Simple Web Page v2</title>
 </head>
 <body>
-    <div id="help">#help</div>
-    <div id="wifiShow">#wifiShow</div>
-    <div id="wifipassShow">#wifipassShow</div>
+    <div id="content">#content</div>
 
     <script>
+        // Function to parse the URL and extract the hash parameter
+        function getHashParameter() {
+            const hash = window.location.hash.substr(1); // Remove the '#' character
+            return hash;
+        }
+
         // Fetch the JSON data from the URL
         fetch('https://raw.githubusercontent.com/itsshello/curl/main/data.json')
             .then(response => response.json())
             .then(data => {
-                // Replace placeholders with actual content from data.json
-                document.getElementById('help').innerText = data.commands.help;
-                document.getElementById('wifiShow').innerText = data.wifi_show;
-                document.getElementById('wifipassShow').innerText = data.wifipass_show;
+                // Get the requested key from the URL hash
+                const requestedKey = getHashParameter();
+
+                // Replace the content with the text associated with the requested key
+                document.getElementById('content').innerText = data[requestedKey] || 'Key not found';
             })
             .catch(error => console.error('Error fetching data:', error));
     </script>
