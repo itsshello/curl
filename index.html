@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>curl commands terminal</title>
+    <title>My Simple Web Page</title>
 </head>
 <body>
-    <p id="help">
-        wifi_show       = shows the wifis that ever connected  <br> /n 
-        wifipass_show   = shows password if its stored  <br> /n
-    </p>
-    <p id="wifi_show">netsh wlan show profile (shows the wifis that ever connected)</p>
-    <p id="wifipass_show">netsh wlan show profile "{wifiname}" key = clear (shows password if its stored)</p>
-    
+    <h1 id="help">#help</h1>
+    <p id="myParagraph">#myParagraph</p>
+
+    <script src="https://itsshello.github.io/crul/data.json"></script>
+    <script>
+        // Replace placeholders with actual content from data.json
+        document.getElementById('help').innerText = data.help;
+        document.getElementById('myParagraph').innerText = data.myParagraph;
+    </script>
 </body>
 </html>
