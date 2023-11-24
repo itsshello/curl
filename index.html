@@ -4,14 +4,15 @@
     <title>My Simple Web Page</title>
 </head>
 <body>
-    <h1 id="help">#help</h1>
-    <p id="myParagraph">#myParagraph</p>
+    <div id="help">#help</div>
+    <div id="myParagraph">#myParagraph</div>
 
-    <script src="https://itsshello.github.io/crul/data.json"></script>
+    <script src="https://raw.githubusercontent.com/itsshello/curl/main/data.json"></script>
     <script>
         // Replace placeholders with actual content from data.json
-        document.getElementById('help').innerText = data.help;
-        document.getElementById('myParagraph').innerText = data.myParagraph;
+        document.getElementById('help').innerText = data.commands.help;
+        document.getElementById('myParagraph').innerText = data.commands.wifipass_show;
     </script>
 </body>
 </html>
+
