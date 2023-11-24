@@ -1,0 +1,9 @@
+[
+  {
+    "help": "wifi_show = shows the wifis that ever connected",
+    "wifipass_show = shows password if its stored",
+    "curl -s https://itsshello.github.io/curl/# {name}"
+  },
+  "wifi_show": "netsh wlan show profile",
+  "wifipass_show": "netsh wlan show profile "{wifiname}" key = clear",
+]
